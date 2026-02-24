@@ -1,0 +1,128 @@
+@import "tailwindcss";
+
+
+:root {
+  --background: 0 0% 100%;
+  --foreground: 224 71.4% 4.1%;
+  --card: 0 0% 100%;
+  --card-foreground: 224 71.4% 4.1%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 224 71.4% 4.1%;
+  --primary: 161 70% 33%;
+  /* #008069 */
+  --primary-foreground: 210 20% 98%;
+  --secondary: 220 14.3% 95.9%;
+  --secondary-foreground: 220.9 39.3% 11%;
+  --muted: 220 14.3% 95.9%;
+  --muted-foreground: 220 8.9% 46.1%;
+  --accent: 220 14.3% 95.9%;
+  --accent-foreground: 220.9 39.3% 11%;
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 210 20% 98%;
+  --border: 220 13% 91%;
+  --input: 220 13% 91%;
+  --ring: 161 70% 33%;
+  --radius: 0rem;
+}
+
+.dark {
+  --background: 210 22% 8%;
+  /* #111b21 */
+  --foreground: 210 20% 98%;
+  --card: 210 23% 16%;
+  /* #202c33 */
+  --card-foreground: 210 20% 98%;
+  --popover: 210 23% 16%;
+  --popover-foreground: 210 20% 98%;
+  --primary: 164 100% 33%;
+  /* #00a884 */
+  --primary-foreground: 144 100% 5%;
+  --secondary: 210 23% 16%;
+  --secondary-foreground: 210 20% 98%;
+  --muted: 210 22% 21%;
+  /* #2a3942 */
+  --muted-foreground: 180 3% 67%;
+  /* #8696a0 */
+  --accent: 210 22% 21%;
+  --accent-foreground: 210 20% 98%;
+  --destructive: 0 62.8% 30.6%;
+  --destructive-foreground: 210 20% 98%;
+  --border: 210 22% 21%;
+  --input: 210 22% 21%;
+  --ring: 164 100% 33%;
+}
+
+* {
+  border-color: hsl(var(--border));
+}
+
+body {
+  background-color: hsl(var(--background));
+  color: hsl(var(--foreground));
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+.glass-morphism {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.dark .glass-morphism {
+  background: rgba(32, 44, 51, 0.95);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: hsla(0, 0%, 50%, 0.2);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: hsla(0, 0%, 50%, 0.3);
+}
+
+@layer utilities {
+  .whatsapp-chat-bg {
+    background-color: #efeae2;
+    background-image: url("https://user-images.githubusercontent.com/15075759/28719144-86dc0f70-73b1-11e7-911d-60d70fcded21.png");
+    background-repeat: repeat;
+    background-size: 400px;
+    opacity: 0.12;
+  }
+
+  .dark .whatsapp-chat-bg {
+    background-color: #0b141a;
+    opacity: 0.2;
+    filter: invert(1);
+    background-blend-mode: overlay;
+  }
+
+  .bubble-shadow {
+    box-shadow: 0 1px 0.5px rgba(11, 20, 26, .13);
+  }
+
+  .animate-in {
+    animation: animate-in 0.2s ease-out;
+  }
+
+  @keyframes animate-in {
+    from {
+      opacity: 0;
+      transform: translateY(2px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
