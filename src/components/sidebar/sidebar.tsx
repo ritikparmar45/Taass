@@ -20,8 +20,7 @@ export const Sidebar = ({ onSelectUser, selectedUserId }: SidebarProps) => {
             {/* WhatsApp Sidebar Header */}
             <div className="h-[60px] px-4 flex items-center justify-between bg-[#f0f2f5] dark:bg-[#202c33]">
                 <div className="flex items-center">
-                    <UserButton fallbackRedirectUrl="/sign-in" appearance={{
-
+                    <UserButton appearance={{
                         elements: {
                             avatarBox: "h-10 w-10"
                         }
