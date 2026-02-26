@@ -18,7 +18,7 @@ export const Sidebar = ({ onSelectUser, selectedUserId }: SidebarProps) => {
     return (
         <div className="h-full w-full flex flex-col bg-white dark:bg-[#111b21] transition-all border-r dark:border-zinc-800/20">
             {/* WhatsApp Sidebar Header */}
-            <div className="h-[60px] px-4 flex items-center justify-between bg-[#f0f2f5] dark:bg-[#202c33]">
+            <div className="h-15 px-4 flex items-center justify-between bg-[#f0f2f5] dark:bg-[#202c33]">
                 <div className="flex items-center">
                     <UserButton appearance={{
                         elements: {
@@ -27,11 +27,11 @@ export const Sidebar = ({ onSelectUser, selectedUserId }: SidebarProps) => {
                     }} />
                 </div>
                 <div className="flex items-center gap-6 text-[#54656f] dark:text-[#aebac1]">
-                    <Users className="h-[20px] w-[20px] cursor-pointer" />
-                    <CircleDashed className="h-[20px] w-[20px] cursor-pointer" />
-                    <MessageSquarePlus className="h-[20px] w-[20px] cursor-pointer" />
+                    <Users className="h-5 w-5 cursor-pointer" />
+                    <CircleDashed className="h-5 w-5 cursor-pointer" />
+                    <MessageSquarePlus className="h-5 w-5 cursor-pointer" />
                     <div className="relative">
-                        <MoreVertical className="h-[20px] w-[20px] cursor-pointer" />
+                        <MoreVertical className="h-5 w-5 cursor-pointer" />
                     </div>
                 </div>
             </div>
@@ -76,7 +76,7 @@ export const Sidebar = ({ onSelectUser, selectedUserId }: SidebarProps) => {
                             <div
                                 key={user._id}
                                 onClick={() => onSelectUser(user)}
-                                className={`flex items-center gap-3 px-3 h-[72px] cursor-pointer transition-all duration-100 group ${selectedUserId === user._id
+                                className={`flex items-center gap-3 px-3 h-18 cursor-pointer transition-all duration-100 group ${selectedUserId === user._id
                                     ? "bg-[#f0f2f5] dark:bg-[#2a3942]"
                                     : "hover:bg-[#f5f6f6] dark:hover:bg-[#202c33]"
                                     }`}
